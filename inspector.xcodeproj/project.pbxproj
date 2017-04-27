@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		040D58B21DB0B3067DC330DB /* Pods_inspectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29DBC68C1C5A6A7F05FACD0 /* Pods_inspectorTests.framework */; };
+		0985A467242878B502265DB1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCA88B3A22FBEB86A51FC9E /* AssetsLibrary.framework */; };
+		2836A806CF0BDA96755E0C1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A42F72E2605EFD1107D3FA /* AVFoundation.framework */; };
+		36744BBCEC37AFD0C9968612 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B47767D5485C72796A7956F /* QuartzCore.framework */; };
+		3EB966210CBA85E61B0AB903 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7012614C58AD718357C1F199 /* CoreVideo.framework */; };
 		5D0DC20C1E9F03FB002A370F /* ImageConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0DC20B1E9F03FB002A370F /* ImageConvert.swift */; };
 		5D6FDFD01E862D4200A3FF8E /* RotateUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6FDFCF1E862D4200A3FF8E /* RotateUIImage.swift */; };
 		5D6FDFD21E86492C00A3FF8E /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6FDFD11E86492C00A3FF8E /* AnalysisViewController.swift */; };
@@ -23,8 +27,12 @@
 		5D96AC461E85CA7B00D6EE43 /* RawGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96AC451E85CA7B00D6EE43 /* RawGraphViewController.swift */; };
 		5D96AC4C1E85F00700D6EE43 /* SampleCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96AC4B1E85F00700D6EE43 /* SampleCaptureViewController.swift */; };
 		5DC00F111E85F6BE00330577 /* SampleGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC00F101E85F6BE00330577 /* SampleGraphViewController.swift */; };
+		6CD99D8D297C13E67676D16E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5269131B0F73D01D5D992E /* CoreText.framework */; };
+		8B0899D2F28CD618656E13E5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888C70C5B4899CCEEF304571 /* CoreMedia.framework */; };
 		8D9C24AE0690D9E187C3B090 /* Pods_inspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF12033B72FE3252D41486E2 /* Pods_inspector.framework */; };
 		99522F108D59CDE16505D004 /* Pods_inspectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1741EB72DEF7E6E5770EF8C9 /* Pods_inspectorUITests.framework */; };
+		DE1961FAD1C5B702A8FA5D11 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E456742DC6CF1CDF9D38281C /* SystemConfiguration.framework */; };
+		ED0FF4A1E1F2A29D0C55B5DE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43742EFD537F24266EACD5B /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,8 @@
 		1741EB72DEF7E6E5770EF8C9 /* Pods_inspectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inspectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		182AF13778BB27590CCDA0CB /* Pods-inspectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inspectorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inspectorUITests/Pods-inspectorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1F7ED48AD1150D62B84F89C4 /* Pods-inspector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inspector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inspector/Pods-inspector.debug.xcconfig"; sourceTree = "<group>"; };
+		2BCA88B3A22FBEB86A51FC9E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		3B47767D5485C72796A7956F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D0DC20B1E9F03FB002A370F /* ImageConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConvert.swift; sourceTree = "<group>"; };
 		5D6FDFCF1E862D4200A3FF8E /* RotateUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateUIImage.swift; sourceTree = "<group>"; };
 		5D6FDFD11E86492C00A3FF8E /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
@@ -70,11 +80,18 @@
 		5D96AC451E85CA7B00D6EE43 /* RawGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawGraphViewController.swift; sourceTree = "<group>"; };
 		5D96AC4B1E85F00700D6EE43 /* SampleCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCaptureViewController.swift; sourceTree = "<group>"; };
 		5DC00F101E85F6BE00330577 /* SampleGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleGraphViewController.swift; sourceTree = "<group>"; };
+		7012614C58AD718357C1F199 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		888C70C5B4899CCEEF304571 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A1A42F72E2605EFD1107D3FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A29DBC68C1C5A6A7F05FACD0 /* Pods_inspectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inspectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE2AE450BD54540E9181587 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		CF12033B72FE3252D41486E2 /* Pods_inspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E456742DC6CF1CDF9D38281C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E6C9CF4B2E16B0DDFEEAE123 /* Pods-inspectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inspectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inspectorTests/Pods-inspectorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB409DB9A3F7C4F44D388829 /* Pods-inspectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inspectorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inspectorUITests/Pods-inspectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0D225965BFA957611E5D5EF /* Pods-inspectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inspectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inspectorTests/Pods-inspectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		F43742EFD537F24266EACD5B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FF5269131B0F73D01D5D992E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +100,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9C24AE0690D9E187C3B090 /* Pods_inspector.framework in Frameworks */,
+				0985A467242878B502265DB1 /* AssetsLibrary.framework in Frameworks */,
+				6CD99D8D297C13E67676D16E /* CoreText.framework in Frameworks */,
+				ED0FF4A1E1F2A29D0C55B5DE /* CoreTelephony.framework in Frameworks */,
+				DE1961FAD1C5B702A8FA5D11 /* SystemConfiguration.framework in Frameworks */,
+				36744BBCEC37AFD0C9968612 /* QuartzCore.framework in Frameworks */,
+				2836A806CF0BDA96755E0C1B /* AVFoundation.framework in Frameworks */,
+				8B0899D2F28CD618656E13E5 /* CoreMedia.framework in Frameworks */,
+				3EB966210CBA85E61B0AB903 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +210,15 @@
 				CF12033B72FE3252D41486E2 /* Pods_inspector.framework */,
 				A29DBC68C1C5A6A7F05FACD0 /* Pods_inspectorTests.framework */,
 				1741EB72DEF7E6E5770EF8C9 /* Pods_inspectorUITests.framework */,
+				CCE2AE450BD54540E9181587 /* BuddyBuildSDK.framework */,
+				2BCA88B3A22FBEB86A51FC9E /* AssetsLibrary.framework */,
+				FF5269131B0F73D01D5D992E /* CoreText.framework */,
+				F43742EFD537F24266EACD5B /* CoreTelephony.framework */,
+				E456742DC6CF1CDF9D38281C /* SystemConfiguration.framework */,
+				3B47767D5485C72796A7956F /* QuartzCore.framework */,
+				A1A42F72E2605EFD1107D3FA /* AVFoundation.framework */,
+				888C70C5B4899CCEEF304571 /* CoreMedia.framework */,
+				7012614C58AD718357C1F199 /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -636,6 +670,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CC476WHYU6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = inspector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JeremyStorer.inspector;
@@ -650,6 +688,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CC476WHYU6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = inspector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JeremyStorer.inspector;
