@@ -51,7 +51,24 @@ class AnalysisViewController: UIViewController,MFMailComposeViewControllerDelega
         let count = rawIntensityArray.count
         
         for i in 0...count-1 {
-            let newLine = "\(String(i)),\(String(rawRedArray[i])),\(String(rawGreenArray[i])),\(String(rawBlueArray[i])),\(String(rawIntensityArray1[i])),\(String(rawIntensityArray2[i])),\(String(rawIntensityArray3[i])),\(String(rawIntensityArray[i])),\(String(sampleRedArray[i])),\(String(sampleGreenArray[i])),\(String(sampleBlueArray[i])),\(String(sampleIntensityArray1[i])),\(String(sampleIntensityArray2[i])),\(String(sampleIntensityArray3[i])),\(String(sampleIntensityArray[i])),\(String(absorbanceArray[i])),\(String(absorbanceArraySmoothed[i]))\n"
+            var newLine = ""
+            newLine = newLine + "\(String(i)),"
+            newLine = newLine + "\(String(rawRedArray[i])),"
+            newLine = newLine + "\(String(rawGreenArray[i])),"
+            newLine = newLine + "\(String(rawBlueArray[i])),"
+            newLine = newLine + "\(String(rawIntensityArray1[i])),"
+            newLine = newLine + "\(String(rawIntensityArray2[i])),"
+            newLine = newLine + "\(String(rawIntensityArray3[i])),"
+            newLine = newLine + "\(String(rawIntensityArray[i])),"
+            newLine = newLine + "\(String(sampleRedArray[i])),"
+            newLine = newLine + "\(String(sampleGreenArray[i])),"
+            newLine = newLine + "\(String(sampleBlueArray[i])),"
+            newLine = newLine + "\(String(sampleIntensityArray1[i])),"
+            newLine = newLine + "\(String(sampleIntensityArray2[i])),"
+            newLine = newLine + "\(String(sampleIntensityArray3[i])),"
+            newLine = newLine + "\(String(sampleIntensityArray[i])),"
+            newLine = newLine + "\(String(absorbanceArray[i])),"
+            newLine = newLine + "\(String(absorbanceArraySmoothed[i]))\n"
             csvText.append(newLine)
         }
         
