@@ -26,6 +26,7 @@
 		5D845A291E85BE4C00536F54 /* IntensityArrayBuildersAndGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D845A281E85BE4C00536F54 /* IntensityArrayBuildersAndGlobals.swift */; };
 		5D96AC461E85CA7B00D6EE43 /* RawGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96AC451E85CA7B00D6EE43 /* RawGraphViewController.swift */; };
 		5D96AC4C1E85F00700D6EE43 /* SampleCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96AC4B1E85F00700D6EE43 /* SampleCaptureViewController.swift */; };
+		5D9E42461EEEF05600DCB12F /* RGBGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E42451EEEF05600DCB12F /* RGBGraphViewController.swift */; };
 		5DC00F111E85F6BE00330577 /* SampleGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC00F101E85F6BE00330577 /* SampleGraphViewController.swift */; };
 		6CD99D8D297C13E67676D16E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5269131B0F73D01D5D992E /* CoreText.framework */; };
 		8B0899D2F28CD618656E13E5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888C70C5B4899CCEEF304571 /* CoreMedia.framework */; };
@@ -79,6 +80,7 @@
 		5D845A281E85BE4C00536F54 /* IntensityArrayBuildersAndGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntensityArrayBuildersAndGlobals.swift; sourceTree = "<group>"; };
 		5D96AC451E85CA7B00D6EE43 /* RawGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawGraphViewController.swift; sourceTree = "<group>"; };
 		5D96AC4B1E85F00700D6EE43 /* SampleCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCaptureViewController.swift; sourceTree = "<group>"; };
+		5D9E42451EEEF05600DCB12F /* RGBGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBGraphViewController.swift; sourceTree = "<group>"; };
 		5DC00F101E85F6BE00330577 /* SampleGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleGraphViewController.swift; sourceTree = "<group>"; };
 		7012614C58AD718357C1F199 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		888C70C5B4899CCEEF304571 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -182,6 +184,7 @@
 				5D6FDFD11E86492C00A3FF8E /* AnalysisViewController.swift */,
 				5D6FDFD31E86B63400A3FF8E /* CameraConfigViewController.swift */,
 				5D0DC20B1E9F03FB002A370F /* ImageConvert.swift */,
+				5D9E42451EEEF05600DCB12F /* RGBGraphViewController.swift */,
 			);
 			path = inspector;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			files = (
 				5D845A271E85B01D00536F54 /* RawCaptureViewController.swift in Sources */,
 				5D96AC4C1E85F00700D6EE43 /* SampleCaptureViewController.swift in Sources */,
+				5D9E42461EEEF05600DCB12F /* RGBGraphViewController.swift in Sources */,
 				5D8459F91E85B00600536F54 /* AppDelegate.swift in Sources */,
 				5D0DC20C1E9F03FB002A370F /* ImageConvert.swift in Sources */,
 				5D6FDFD41E86B63400A3FF8E /* CameraConfigViewController.swift in Sources */,

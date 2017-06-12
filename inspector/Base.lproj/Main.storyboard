@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +51,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJa-Zk-7R0">
-                                <rect key="frame" x="121" y="530" width="77" height="30"/>
+                                <rect key="frame" x="121.5" y="530" width="76" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takePhotoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qf1-FW-a1l"/>
@@ -412,7 +412,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLA-8C-8rX">
-                                <rect key="frame" x="122" y="530" width="77" height="30"/>
+                                <rect key="frame" x="122.5" y="530" width="76" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takePhotoPressed:" destination="DDf-xf-M9j" eventType="touchUpInside" id="t67-4C-scW"/>
@@ -459,6 +459,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7f-Es-1eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="116"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="LvR-Dl-JQo">
+            <objects>
+                <viewController id="ajl-V7-dfq" customClass="RGBGraphViewController" customModule="inspector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LmP-KQ-ZBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="sNo-vA-C7L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pUO-UK-AHV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfD-aE-5wx" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="1" y="161" width="319" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="rgbGraph" destination="xfD-aE-5wx" id="Yt1-FL-RrS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjq-kq-cZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="880"/>
         </scene>
         <!--Sample Graph View Controller-->
         <scene sceneID="IoO-ko-BiR">
@@ -628,7 +659,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CRZ-vy-lVJ">
-                                <rect key="frame" x="80" y="12" width="160" height="60"/>
+                                <rect key="frame" x="80" y="32" width="160" height="40"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
