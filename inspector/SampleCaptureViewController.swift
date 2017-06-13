@@ -57,6 +57,7 @@ class SampleCaptureViewController: UIViewController,AVCapturePhotoCaptureDelegat
                 try device?.lockForConfiguration()
                 device?.setFocusModeLockedWithLensPosition(focusValue, completionHandler: {(time) -> Void in})
                 device?.setExposureModeCustomWithDuration(CMTimeMake(1, exposureValue), iso: ISOValue, completionHandler: {(time) -> Void in})
+                device?.videoZoomFactor = 2.0
                 device?.unlockForConfiguration()
             }catch{
 //                print(error)

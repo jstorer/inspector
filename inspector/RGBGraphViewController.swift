@@ -12,9 +12,12 @@ import Charts
 class RGBGraphViewController: UIViewController {
 
     @IBOutlet weak var rgbGraph: LineChartView!
+    @IBOutlet weak var rawImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rawImageView.image = rawImage1
         
         var redVals: [ChartDataEntry] = [ChartDataEntry]()
         for i in 0...rawRedArray.count-1{
@@ -63,6 +66,7 @@ class RGBGraphViewController: UIViewController {
         
         let data: LineChartData = LineChartData(dataSets: dataSets)
         self.rgbGraph.data = data
+        self.rgbGraph.backgroundColor = UIColor.white
         self.rgbGraph.leftAxis.drawLabelsEnabled = false
         self.rgbGraph.rightAxis.drawLabelsEnabled = true
         self.rgbGraph.xAxis.drawLabelsEnabled = false

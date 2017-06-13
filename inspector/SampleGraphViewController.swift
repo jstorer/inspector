@@ -34,11 +34,11 @@ class SampleGraphViewController: UIViewController {
             sampleIntensityArray.append(Float(sampleIntensityArray1[i] + sampleIntensityArray2[i] + sampleIntensityArray3[i])/3)
         }
         
-        sampleIntensityArraySmoothed = movingAverage(passedArray: sampleIntensityArray, samples: 4)
+        sampleIntensityArraySmoothed = movingAverage(passedArray: sampleIntensityArray, samples: 2)
         sampleIntensityArray = cropArray(passedArray: sampleIntensityArray)
         calculateAbsorbance()
         
-        absorbanceArraySmoothed = movingAverage(passedArray: absorbanceArray, samples: 20)
+        absorbanceArraySmoothed = movingAverage(passedArray: absorbanceArray, samples: 100)
         
         var yValsRaw: [ChartDataEntry] = [ChartDataEntry]()
         for i in 0...rawIntensityArray.count-1{

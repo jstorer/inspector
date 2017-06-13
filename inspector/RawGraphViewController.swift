@@ -36,7 +36,7 @@ class RawGraphViewController: UIViewController {
         
         rawIntensityArray = cropArray(passedArray: rawIntensityArray)
         
-        rawIntensityArraySmoothed = movingAverage(passedArray: rawIntensityArray, samples: 100)
+        rawIntensityArraySmoothed = movingAverage(passedArray: rawIntensityArray, samples: 2)
 
         var yVals: [ChartDataEntry] = [ChartDataEntry]()
         for i in 0...rawIntensityArray.count-1{

@@ -17,7 +17,7 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     @IBOutlet weak var rawImageView: UIImageView!
     @IBOutlet weak var rgbGraph: LineChartView!
     @IBOutlet weak var takePhotoButton: UIButton!
-    @IBOutlet weak var retakeButton: UIButton!
+//    @IBOutlet weak var retakeButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var boundingBoxImage: UIImageView!
     
@@ -45,23 +45,20 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         settingsForMonitoring = AVCapturePhotoSettings(from: settingsForMonitoring)
         stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
         
-        takePhotoButton.isHidden = true
-        retakeButton.isHidden = false
+        //takePhotoButton.isHidden = true
+       // retakeButton.isHidden = false
 
     }
    
-    @IBAction func retakePressed(_ sender: Any) {
-        takePhotoButton.isHidden = false
-        retakeButton.isHidden = true
-        rgbGraph.isHidden = true
-        previewView.isHidden = false
-    }
+//    @IBAction func retakePressed(_ sender: Any) {
+//        takePhotoButton.isHidden = false
+//        retakeButton.isHidden = true
+//       // rgbGraph.isHidden = true
+//        //previewView.isHidden = false
+//    }
     override func viewWillAppear(_ animated: Bool) {
         self.rawImageView.image = rawImage1
-        rgbGraph.isHidden = true
-        previewView.isHidden = false
-        retakeButton.isHidden = true
-        takePhotoButton.isHidden = false
+        
     }
     
  
@@ -71,7 +68,6 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         
         if(rawImage1 == nil){
             self.nextButton.isEnabled = false}
-        retakeButton.isHidden = true
         
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
@@ -84,6 +80,7 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
                 try device?.lockForConfiguration()
                 device?.setFocusModeLockedWithLensPosition(focusValue, completionHandler: {(time) -> Void in})
                 device?.setExposureModeCustomWithDuration(CMTimeMake(1, exposureValue), iso: ISOValue, completionHandler: {(time) -> Void in})
+                device?.videoZoomFactor = 2.0
                 device?.unlockForConfiguration()
             }catch{
 //                print(error)
@@ -113,62 +110,62 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
          rawImage1 = cropImage(image: tempImage)
          makeRGBIntensityArrays(imageRef: rawImage1!)
         
-            var redVals: [ChartDataEntry] = [ChartDataEntry]()
-            for i in 0...rawRedArray.count-1{
-                redVals.append(ChartDataEntry(x: Double(i), y: Double(rawRedArray[i])))
-            }
-            var greenVals: [ChartDataEntry] = [ChartDataEntry]()
-            for i in 0...rawGreenArray.count-1{
-                greenVals.append(ChartDataEntry(x: Double(i), y: Double(rawGreenArray[i])))
-            }
-            var blueVals: [ChartDataEntry] = [ChartDataEntry]()
-            for i in 0...rawBlueArray.count-1{
-                blueVals.append(ChartDataEntry(x: Double(i), y: Double(rawBlueArray[i])))
-            }
-            
-            let redSet: LineChartDataSet = LineChartDataSet(values: redVals, label: "red channel")
-            redSet.axisDependency = .left
-            redSet.setColor(UIColor.red)
-            redSet.lineWidth = 0.5
-            redSet.circleRadius = 0
-            redSet.fillColor = UIColor.red
-            redSet.highlightColor = UIColor.clear
-            redSet.highlightLineWidth = 1.2
-            
-            let greenSet: LineChartDataSet = LineChartDataSet(values: greenVals, label: "green channel")
-            greenSet.axisDependency = .left
-            greenSet.setColor(UIColor.green)
-            greenSet.lineWidth = 0.5
-            greenSet.circleRadius = 0
-            greenSet.fillColor = UIColor.green
-            greenSet.highlightColor = UIColor.clear
-            greenSet.highlightLineWidth = 1.2
-            
-            let blueSet: LineChartDataSet = LineChartDataSet(values: blueVals, label: "blue channel")
-            blueSet.axisDependency = .left
-            blueSet.setColor(UIColor.blue)
-            blueSet.lineWidth = 0.5
-            blueSet.circleRadius = 0
-            blueSet.fillColor = UIColor.blue
-            blueSet.highlightColor = UIColor.clear
-            blueSet.highlightLineWidth = 1.2
-            
-            var dataSets:[LineChartDataSet] = [LineChartDataSet]()
-            dataSets.append(redSet)
-            dataSets.append(greenSet)
-            dataSets.append(blueSet)
-            
-            let data: LineChartData = LineChartData(dataSets: dataSets)
-            self.rgbGraph.data = data
-            self.rgbGraph.leftAxis.drawLabelsEnabled = false
-            self.rgbGraph.rightAxis.drawLabelsEnabled = true
-            self.rgbGraph.xAxis.drawLabelsEnabled = false
-            self.rgbGraph.chartDescription?.text = "rgb values vs pixel"
-            self.rgbGraph.pinchZoomEnabled = false
-            self.rgbGraph.doubleTapToZoomEnabled = false
-            
-           previewView.isHidden = true
-            rgbGraph.isHidden = false
+//            var redVals: [ChartDataEntry] = [ChartDataEntry]()
+//            for i in 0...rawRedArray.count-1{
+//                redVals.append(ChartDataEntry(x: Double(i), y: Double(rawRedArray[i])))
+//            }
+//            var greenVals: [ChartDataEntry] = [ChartDataEntry]()
+//            for i in 0...rawGreenArray.count-1{
+//                greenVals.append(ChartDataEntry(x: Double(i), y: Double(rawGreenArray[i])))
+//            }
+//            var blueVals: [ChartDataEntry] = [ChartDataEntry]()
+//            for i in 0...rawBlueArray.count-1{
+//                blueVals.append(ChartDataEntry(x: Double(i), y: Double(rawBlueArray[i])))
+//            }
+//
+//            let redSet: LineChartDataSet = LineChartDataSet(values: redVals, label: "red channel")
+//            redSet.axisDependency = .left
+//            redSet.setColor(UIColor.red)
+//            redSet.lineWidth = 0.5
+//            redSet.circleRadius = 0
+//            redSet.fillColor = UIColor.red
+//            redSet.highlightColor = UIColor.clear
+//            redSet.highlightLineWidth = 1.2
+//
+//            let greenSet: LineChartDataSet = LineChartDataSet(values: greenVals, label: "green channel")
+//            greenSet.axisDependency = .left
+//            greenSet.setColor(UIColor.green)
+//            greenSet.lineWidth = 0.5
+//            greenSet.circleRadius = 0
+//            greenSet.fillColor = UIColor.green
+//            greenSet.highlightColor = UIColor.clear
+//            greenSet.highlightLineWidth = 1.2
+//
+//            let blueSet: LineChartDataSet = LineChartDataSet(values: blueVals, label: "blue channel")
+//            blueSet.axisDependency = .left
+//            blueSet.setColor(UIColor.blue)
+//            blueSet.lineWidth = 0.5
+//            blueSet.circleRadius = 0
+//            blueSet.fillColor = UIColor.blue
+//            blueSet.highlightColor = UIColor.clear
+//            blueSet.highlightLineWidth = 1.2
+//
+//            var dataSets:[LineChartDataSet] = [LineChartDataSet]()
+//            dataSets.append(redSet)
+//            dataSets.append(greenSet)
+//            dataSets.append(blueSet)
+//
+//            let data: LineChartData = LineChartData(dataSets: dataSets)
+//            self.rgbGraph.data = data
+//            self.rgbGraph.leftAxis.drawLabelsEnabled = false
+//            self.rgbGraph.rightAxis.drawLabelsEnabled = true
+//            self.rgbGraph.xAxis.drawLabelsEnabled = false
+//            self.rgbGraph.chartDescription?.text = "rgb values vs pixel"
+//            self.rgbGraph.pinchZoomEnabled = false
+//            self.rgbGraph.doubleTapToZoomEnabled = false
+//
+//           previewView.isHidden = true
+//            rgbGraph.isHidden = false
             
             
         self.rawImageView.image = rawImage1
