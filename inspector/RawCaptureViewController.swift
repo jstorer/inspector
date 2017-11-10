@@ -44,18 +44,10 @@ class RawCaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         
         settingsForMonitoring = AVCapturePhotoSettings(from: settingsForMonitoring)
         stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
-        
-        //takePhotoButton.isHidden = true
-       // retakeButton.isHidden = false
+
 
     }
-   
-//    @IBAction func retakePressed(_ sender: Any) {
-//        takePhotoButton.isHidden = false
-//        retakeButton.isHidden = true
-//       // rgbGraph.isHidden = true
-//        //previewView.isHidden = false
-//    }
+
     override func viewWillAppear(_ animated: Bool) {
         self.rawImageView.image = rawImage1
         

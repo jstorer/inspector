@@ -34,7 +34,7 @@ public struct RGBAImage {
     public var height: Int
     
     public init?(image: UIImage) {
-        // CGImage로 변환이 가능해야 한다.
+        // CGImage
         guard let cgImage = image.cgImage else {
             return nil
         }
@@ -43,7 +43,7 @@ public struct RGBAImage {
         width = Int(image.size.width)
         height = Int(image.size.height)
         
-        //        let bitsPerComponent = 8 // 픽셀의 한 요소당 1바이트
+        //        let bitsPerComponent = 8 //
         //        let bytesPerPixels = 4 // RGBA
         let bytesPerRow = width * 4
         let imageData = UnsafeMutablePointer<Pixel>.allocate(capacity: width * height)

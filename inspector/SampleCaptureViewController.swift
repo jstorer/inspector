@@ -60,7 +60,7 @@ class SampleCaptureViewController: UIViewController,AVCapturePhotoCaptureDelegat
                 device?.videoZoomFactor = 2.0
                 device?.unlockForConfiguration()
             }catch{
-//                print(error)
+                print(error)
             }
 
             stillImageOutput.isHighResolutionCaptureEnabled = true
@@ -77,7 +77,7 @@ class SampleCaptureViewController: UIViewController,AVCapturePhotoCaptureDelegat
 self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
             }
         }catch{
-//            print(error)
+           print(error)
         }
 
 

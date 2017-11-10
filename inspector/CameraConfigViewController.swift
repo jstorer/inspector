@@ -87,7 +87,7 @@ self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
                 device?.setExposureModeCustomWithDuration(CMTimeMake(1, Int32(self.ExposureSlider.maximumValue - self.ExposureSlider.value + self.ExposureSlider.minimumValue)), iso: self.ISOSlider.value, completionHandler: {(time) -> Void in})
                 device?.unlockForConfiguration()
             }catch{
-//                print(error)
+               print(error)
             }
             
             stillImageOutput.isHighResolutionCaptureEnabled = true
@@ -121,7 +121,7 @@ self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
                 device?.setExposureModeCustomWithDuration(CMTimeMake(1, Int32(self.ExposureSlider.maximumValue - self.ExposureSlider.value + self.ExposureSlider.minimumValue)), iso: self.ISOSlider.value, completionHandler: {(time) -> Void in})
                 device?.unlockForConfiguration()
             }catch{
-//                print(error)
+                print(error)
             }
             
             stillImageOutput.isHighResolutionCaptureEnabled = true
@@ -138,7 +138,7 @@ self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
 self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
             }
         }catch{
-//            print(error)
+            print(error)
         }
 
         
@@ -156,7 +156,7 @@ self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
                 device?.setExposureModeCustomWithDuration(CMTimeMake(1, Int32(self.ExposureSlider.maximumValue - self.ExposureSlider.value + self.ExposureSlider.minimumValue)), iso: self.ISOSlider.value, completionHandler: {(time) -> Void in})
                 device?.unlockForConfiguration()
             }catch{
-//                print(error)
+                print(error)
             }
             
             stillImageOutput.isHighResolutionCaptureEnabled = true
@@ -173,7 +173,7 @@ self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
 self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
             }
         }catch{
-//            print(error)
+            print(error)
         }
 
     }
