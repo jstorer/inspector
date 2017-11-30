@@ -47,16 +47,6 @@ class CameraConfigViewController: UIViewController {
         
         let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         do{
-            
-            do{
-                try device?.lockForConfiguration()
-                device?.setFocusModeLockedWithLensPosition(focusValue, completionHandler: {(time) -> Void in})
-                device?.setExposureModeCustomWithDuration(CMTimeMake(1, exposureValue), iso: ISOValue, completionHandler: {(time) -> Void in})
-                device?.unlockForConfiguration()
-            }catch{
-               // print(error)
-            }
-            
             stillImageOutput.isHighResolutionCaptureEnabled = true
             let input = try AVCaptureDeviceInput(device: device)
             if(captureSession.canAddInput(input)){
@@ -69,6 +59,15 @@ class CameraConfigViewController: UIViewController {
                     captureVideoLayer.frame = self.previewView.bounds
                     captureVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 self.previewView.layer.insertSublayer(captureVideoLayer, at: 0)                }
+                do{
+                    try device?.lockForConfiguration()
+                    device?.setFocusModeLockedWithLensPosition(focusValue, completionHandler: {(time) -> Void in})
+                    device?.setExposureModeCustomWithDuration(CMTimeMake(1, exposureValue), iso: ISOValue, completionHandler: {(time) -> Void in})
+                    device?.videoZoomFactor = 2.0
+                    device?.unlockForConfiguration()
+                }catch{
+                    print(error)
+                }
             }
         }catch{
            // print(error)
